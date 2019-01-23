@@ -1,7 +1,7 @@
 COMPINT (COMP_Q in paper) files:
 COMPINTs from kernel [kx,ky,1,4] stored in CIkxky4 folder.
 In each of these folders:
-COMP_Q has 4 channels stored in COMPINT0,1,2,3 as f00ix.png files (ix=1-6 for the 6 examples in paper).
+COMP_Q has 4 channels stored in COMPINT0,1,2,3 as f00ix.png files (ix=1-3 for the 3 examples in paper).
 PNG is just a uint8 container of these integer arrays, no compression (when I save these arrays, compression_level = 0, and values-no-change-saving-and-reading checked as well).
 
 
