@@ -1,0 +1,16 @@
+COMPINT (COMP_Q in paper) files:
+COMPINTs from kernel [kx,ky,1,4] stored in CIkxky4 folder.
+In each of these folders:
+COMP_Q has 4 channels stored in COMPINT0,1,2,3 as f00ix.png files (ix=1-6 for the 6 examples in paper).
+PNG is just a uint8 container of these integer arrays, no compression (when I save these arrays, compression_level = 0, and values-no-change-saving-and-reading checked as well).
+
+
+Arithmetic coding tests based on Haojie's modules using arcode: test_CI_arcode_paper_RB_14bit.ipynb
+This is very similar to the Huffman program above, and output compression ratios at the end of program as well.
+A few differences:
+A1. To go with Haojie's modules, uint8 integer array is transformed to int8 array for input (subtract 128, and data type conversion). See in code.
+A2. There is no decoding in these tests. (If Haojie can provide an example of decoding separately or add here, that will be helpful.)
+
+One can easily and directly run the ipynb programs in this master folder and compare with my results stored in the CIkxky4 folders.
+
+
