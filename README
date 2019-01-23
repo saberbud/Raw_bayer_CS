@@ -1,0 +1,16 @@
+This is a self-contained package of using our CS method to compress raw-bayer images into COMPQ arrays, decompression, demosaic and compare metrics.
+
+1. The example raw-bayer images are stored in ./Example_raw_bayer_data
+2. The sub-package of CS with kernel [k, k, 1, 4] are in directory CS_kk4, where k=8, 16, 32.
+3. The hybrid-CS-JPEG package is in ./CS_884_JPEG85
+4. The Matlab code xy_DM.m in directory ./Demosaic is used for demosaicing raw-bayer data into RGB data.
+5. The program check_RGB_metrics.ipynb is for comparing RGB from original and reconstructed raw-bayer data and calculating the metrics.
+
+More detailed illustration for the sub-packages of CS: CS_884 for example; the other 2 are similar.
+C.1 Compression_quantization_save_as_pic.ipynb use the learned integer code as conv2D kernel to compress raw-bayer data into COMPQ arrays. Each channel of the compressed array is stored as a uncompressed PNG file. Consistency checks of I/O are included in this program.
+C.2 Decompression_combine_COMPINT_16_884.ipynb decompresses the stored COMPQ arrays into reconstructed raw-bayer. And saves the result for demosaicing.
+C.3 check_RB_recon.ipynb is used to check the reconstruction quality of the raw-bayer data. This is not a necessary step for using the CS compression or decompression.
+C.4 The original and reconstructed raw-bayer data need to be copied to the Demosaic directory to be demosaiced.
+C.5 The check_RB_recon.ipynb and check_RGB_metrics.ipynb for example i is stored in the directory Ei, where i= 1,2,3. This is for checking purposes.
+C.6 Note that the Jupyter notebooks stored in Ei reproduce the results in our CS paper.
+
