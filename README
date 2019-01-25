@@ -6,6 +6,7 @@ This is a self-contained package of using our CS method to compress raw-bayer im
 4. The Matlab code xy_DM.m in directory ./Demosaic is used for demosaicing raw-bayer data into RGB data.
 5. The program check_RGB_metrics.ipynb is for comparing RGB from original and reconstructed raw-bayer data and calculating the metrics.
 6. The check of entropy coding's effect is in ./Entropy_coding_check_raw_bayer
+7. The JPEG and JP2K compression tests are in ./JPEG_JP2K_comparisons
 
 More detailed illustration for the sub-packages of CS: CS_884 for example; the other 2 are similar.
 C.1 Compression_quantization_save_as_pic.ipynb use the learned integer code as conv2D kernel to compress raw-bayer data into COMPQ arrays. Each channel of the compressed array is stored as a uncompressed PNG file. Consistency checks of I/O are included in this program.
